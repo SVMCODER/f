@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ʀΛօɴ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="tab-nav-container">
+    <div class="tab" onclick="window.location.replace('home.html')">
+      <i class='bx bx-home'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('compose.html')">
+      <i class='bx bx-notepad'></i>
+      <p></p>
+    </div>
+    
+    <div class="tab active">
+      <i class='bx bxs-heart' ></i>
+      <p></p>
+    </div>
+
+    <div class="tab" onclick="window.location.replace('chat.html')">
+        <i class='bx bx-chat'></i>
+        <p></p>
+      </div>
+  </div>
+  <div class="head">
+    <h3>ʀΛօɴ</h3>
+
+  <h3 class="right">
+    <i class='bx bx-log-out' onclick="logout()"></i>
+    <i></i>
+   </h3>
+  </div>
+  <br><br><br>
+  <div id="roomList">
+    <h2>No Notifications</h2>
+    <ul id="messagesList"></ul>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <script src="n.js"></script>
+  <br><br><br>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#roomList {
+  border-radius: 5px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgb(8, 8, 8);
+}
+
+#roomList h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px;
+  color: white;
+  background-color: #030303;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+  </style>
+</body>
+
+</html>

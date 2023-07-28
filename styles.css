@@ -1,0 +1,411 @@
+html,body {
+  outline-color: #050505;
+  height: 94%;
+  margin: 0;
+  user-select: none;
+  }
+  a{
+  text-decoration: underline;
+  color: #00f7ff;
+  }
+body {
+  outline-color: #161616;
+  background-color: #010101;
+  color: rgb(255, 255, 255);
+}
+
+.tab-nav-container{
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  box-shadow: 0 3px 6px #000000, 0 3px 6px #000000;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.tab{
+  color: rgb(255, 255, 255);
+  border-radius:50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  padding: 20px 20px;
+  margin: 0 10px;
+  font-size: 1em;
+  transition: background 0.4 linear;
+}
+
+.tab i{
+  font-size: 1em;
+}
+
+.tab p{
+  font-weight:bold;
+  overflow: hidden;
+  max-width:0;
+}
+.tab.active p{
+  overflow: hidden;
+}
+.tab.active{
+  color: #0034d1;
+}
+.tab.active.yellow{
+  background-color: rgba(230, 169, 25, 0.2);
+  color: rgba(230, 169, 25, 1);
+}
+.tab.active.teal{
+  background-color: rgba(28, 150, 162, 0.2);
+  color: rgba(28, 150, 162, 1);
+}
+.views-container {
+  display: inline-block;
+  margin-right: 10px;
+}
+.liked {
+  color: #ff004c;
+  animation: pulse 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.like-container {
+  display: inline-block;
+}
+
+.interaction-container {
+  margin-top: 10px;
+}
+
+.like-container i {
+  margin-right: 5px;
+}
+.views-container {
+  display: flex;
+  align-items: center;
+}
+
+.views-container i {
+  margin-right: 5px;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+button {
+  width: fit-content;
+  border: none;
+  padding: 0.6em 1em;
+  border-radius: 4px;
+  margin: 10px 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 17px;
+  cursor: pointer;
+  }
+
+.container {
+  box-shadow: rgb(0, 0, 0) 0px 1px 4px;
+  background-color: #050505;
+  width: fit-content;
+  height: auto;
+  width: 90%;
+  padding-bottom: 30px;
+  color: rgb(255, 255, 255);
+  padding: 0.6em 1em;
+}
+.head{
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    display: flex;
+    position: fixed;
+    border-bottom: 0.2px solid rgb(0, 0, 0) ;
+    justify-content: space-between;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0.1em 1em;
+}
+.right {
+  float: right;
+  padding: 0em 1.5em;
+}
+img {
+  width: 70%;
+  height: auto;
+}
+input {
+  padding: 1em 1em;
+  border: none;
+  width: 90%;
+  outline-color: #000000;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+textarea {
+  padding: 1em 1em;
+  border: none;
+  outline-color: #2300a1;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  resize: none;
+  width: 90%;
+  height: 300px;
+}  #blogContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+.author-info-container {
+  padding: 0.6em 1em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.author-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.delete-icon {
+  margin-left: 20px;
+  font-size: 16px;
+  color: #888;
+  cursor: pointer;
+}
+/* Styles for individual blog posts */
+.blog {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgb(2, 2, 2);
+}
+
+/* Styles for the blog image */
+.blog img {
+  width: 100%;
+  height: auto;
+}
+
+/* Styles for the blog title */
+.blog h2 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Styles for the blog content */
+.blog p {
+  font-size: 14px;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Styles for the views and likes container */
+.interaction-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: #030303;
+  padding: 0.6em 1em;
+}
+
+
+/* Styles for the options button */
+.options-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #181818;
+}
+
+/* Styles for the options container */
+.options-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Styles for the options container buttons */
+.options-container button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.blog-header {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.timestamp {
+  margin: 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.interaction-container {
+  display: flex;
+  align-items: center;
+}
+
+.views-container,
+.like-container {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.views-container i,
+.like-container i {
+  margin-right: 5px;
+}
+
+.views-count,
+.likes-count {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+
+
+.blog {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.blog:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.blog-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.author-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.author-info h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.timestamp {
+  margin: 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.post-element {
+  position: relative;
+}
+
+.post-element img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.post-element h3 {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.like-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.like-container i {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.interaction-container {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+}
+
+.views-container,
+.likes-container {
+  display: flex;
+  align-items: center;
+}
+
+.views-container i,
+.likes-container i {
+  margin-right: 5px;
+}
+
+.delete-icon {
+  color: #4e4e4e;
+  cursor: pointer;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ʀΛօɴ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="tab-nav-container">
+    <div class="tab active purple">
+      <i class='bx bxs-home'></i>
+      <p></p>
+    </div>
+    <div class="tab"  onclick="window.location.replace('compose.html')">
+      <i class='bx bx-notepad'></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('notifications.html')">
+      <i class='bx bx-heart' ></i>
+      <p></p>
+    </div>
+    <div class="tab" onclick="window.location.replace('chat.html')">
+      <i class='bx bx-chat' ></i>
+      <p></p>
+    </div>
+  </div>
+  <div class="head">
+    <h3>ʀΛօɴ</h3>
+    
+    <h3 class="right">
+      <i class='bx bx-log-out' onclick="logout()"></i>
+      <i></i>
+     </h3>
+  </div>
+  <br><br><br> 
+    <div class="aa" align="center">
+        <div id="blogContainer">
+          <div class="blog">
+            <div id="loadingSpinner" class="loading-spinner" align="center"> <br>
+              <div class="spinner"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+   <br><br><br>
+   <style>
+        /* Style for the loading spinner */
+.loading-spinner {
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+   </style>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>  
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>  
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+  <script src="home.js"></script>
+</body>
+</html>

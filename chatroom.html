@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ʀΛօɴ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  
+  <link rel="stylesheet" href="sss.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  
+  <div class="head">
+    <h3>
+      <i class='bx bx-left-arrow' onclick="window.location.replace('chat.html')"></i>
+    </h3> <h3>ʀΛօɴ</h3>
+   <h3 class="right">
+    <i class='bx bx-log-out' onclick="logout()"></i>
+    <i></i>
+   </h3>
+  </div>
+  <br><br><br>
+  <div id="chatContainer">
+    <div id="chatHeader">
+      <h2>ʀΛօɴ Group</h2>
+      <div id="userIcon"></div>
+    </div> <br>
+    <div id="messages">
+      <h3 class="bx bx-refresh"> Loading Chat</h3>
+    </div>
+    <br><br><br><br><br>
+    <form id="messageForm" class="send-message-container">
+      <input type="text" id="messageText" placeholder="Type your message..." maxlength="400">
+      <button type="submit" id="sendButton" disabled><i class="fa fa-paper-plane"></i></button>
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <br><br><br><br>
+  <script src="chatroom.js"></script>
+</body>
+
+</html>
